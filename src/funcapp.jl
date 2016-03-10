@@ -7,7 +7,6 @@ using FastGaussQuadrature
 using PyPlot
 using ApproXD
 import ApproXD: getBasis, BSpline
-#using Distributions # supprimable
 using ApproxFun
 using CompEcon
 
@@ -33,7 +32,7 @@ using CompEcon
 
 # Evaluating the Chebyshev Polynomial and Basis Function
 
-			T(x,deg) = cos(acos(x)*deg) # definiton of Tj(z)
+			T(x,deg) = cos(acos(x)*deg) # definition of Tj(z)
 			z(x,a,b) = 2 * (x - a)/(b - a) - 1	# normalizing x belonging to [a,b] to a basis defined in [-1,1]
 
 			nodes = gausschebyshev(n)[1]*3
@@ -120,7 +119,7 @@ using CompEcon
 
 
 	x = linspace(-1,1,1000)
-	che = [cos(acos(x)j) for j in 0:8] # We need the fisrt nine Chebyshev basis functions
+	che = [cos(acos(x)j) for j in 0:8] # We need the first nine Chebyshev basis functions
 	n=1000
 	m=9
 	Phi = Float64[cos((n-i+0.5)*(j-1)*pi/n) for i=1:n,j=1:m]
