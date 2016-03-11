@@ -28,7 +28,8 @@ using CompEcon
 
 			f(x) = x + 2*(x^2) - exp(-x) # function to be approximated
 			deg = n-1
-			a,b = (-3,3) # bouds for x
+			a = -3.
+			b = 3. # bounds for x
 
 # Evaluating the Chebyshev Polynomial and Basis Function
 
@@ -330,8 +331,8 @@ end
 		# function to run all questions
 	function runall()
 		println("running all questions of HW-funcapprox:")
-		q1(15)
-		q2(15)
+		q1()
+		q2()
 		q3()
 		q4a()
 		q4b()
